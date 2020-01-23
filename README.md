@@ -1,1 +1,0 @@
-# kuchi0509.github.io
