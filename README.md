@@ -7,7 +7,7 @@
 
 - Fork the repository
 - Navigate to your repository
-- `git clone https://github.com/{yourusername}/Vehicle-Price-Prediction.git`
+- `git clone https://github.com/{yourusername}/{repositoryname}.git`
 - Add your contributions
 - `git add .`
 - `git commit -m "comment"`
