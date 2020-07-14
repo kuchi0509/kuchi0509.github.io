@@ -435,6 +435,10 @@ img {
   #nav-blog {
     min-height: 370px;
   }
+  .nav-ul {
+    padding-left: 20px; 
+    padding-right: 20px;
+  }
 }
 
 @media only screen and (max-width: 450px) {
