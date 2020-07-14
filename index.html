@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="description" content="Kartik Derasari">
+    <meta name="keywords"
+        content="Kartik, Kartik Derasari, Derasari, Explore ML, Google AI, IEEE, Google, Microsoft Student Partner, IEEE Collabratec, Silver Oak University, Silver Oak University IEEE Student Branch, IEEE SOCET SB">
+    <meta name="author" content="Kartik Derasari">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="images/png" href="img/avatar_tp.png">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css" />
+    <script src="https://kit.fontawesome.com/c94427133a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Home - Kartik Derasari</title>
+
+
+    <script>
+
+        var TxtType = function (el, toRotate, period) {
+            this.toRotate = toRotate;
+            this.el = el;
+            this.loopNum = 0;
+            this.period = parseInt(period, 10) || 2000;
+            this.txt = '';
+            this.tick();
+            this.isDeleting = false;
+        };
+
+        TxtType.prototype.tick = function () {
+            var i = this.loopNum % this.toRotate.length;
+            var fullTxt = this.toRotate[i];
+
+            if (this.isDeleting) {
+                this.txt = fullTxt.substring(0, this.txt.length - 1);
+            } else {
+                this.txt = fullTxt.substring(0, this.txt.length + 1);
+            }
+
+            this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
+
+            var that = this;
+            var delta = 200 - Math.random() * 100;
+
+            if (this.isDeleting) { delta /= 2; }
+
+            if (!this.isDeleting && this.txt === fullTxt) {
+                delta = this.period;
+                this.isDeleting = true;
+            } else if (this.isDeleting && this.txt === '') {
+                this.isDeleting = false;
+                this.loopNum++;
+                delta = 500;
+            }
+
+            setTimeout(function () {
+                that.tick();
+            }, delta);
+        };
+
+        window.onload = function () {
+            var elements = document.getElementsByClassName('typewrite');
+            for (var i = 0; i < elements.length; i++) {
+                var toRotate = elements[i].getAttribute('data-type');
+                var period = elements[i].getAttribute('data-period');
+                if (toRotate) {
+                    new TxtType(elements[i], JSON.parse(toRotate), period);
+                }
+            }
+            // INJECT CSS
+            var css = document.createElement("style");
+            css.type = "text/css";
+            css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+            document.body.appendChild(css);
+        };
+    </script>
+
+
+</head>
+
+<body>
+
+    <!-- Background Image -->
+    <div class="bg-image" style="background-image: url(img/main_bg.png);"></div>
+
+    <!-- Navigation Bar Container starts -->
+    <div class="container-fluid align-items-end nav-div">
+
+        <!-- Navigation Bar starts -->
+        <nav class="navbar ">
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="" id="navbarNavAltMarkup">
+                <div class=" nav nav-tabs ml-auto nav-ul " id="nav-tab" role="tablist">
+
+                    <a class="nav-item nav-link active" href="#nav-home" data-toggle="tab" role="tab"
+                        aria-selected="true" aria-controls="nav-home" id="nav-home-tab">
+                        <i class="fas fa-home"></i>
+                        Home
+                    </a>
+
+                    <a class="nav-item nav-link" href="#nav-about" data-toggle="tab" role="tab" aria-selected="false"
+                        aria-controls="nav-about" id="nav-about-tab">
+                        <i class="fas fa-user-alt"></i> About Me
+                    </a>
+
+                    <a class="nav-item nav-link" href="#nav-resume" data-toggle="tab" role="tab" aria-selected="false"
+                        aria-controls="nav-resume" id="nav-resume-tab">
+                        <i class="fas fa-graduation-cap"></i> Resume
+                    </a>
+
+                    <a class="nav-item nav-link" href="#nav-blog" data-toggle="tab" role="tab" aria-selected="false"
+                        aria-controls="nav-blog" id="nav-blog-tab">
+                        <i class="fas fa-book-open"></i> Stories
+                    </a>
+
+                    <a class="nav-item nav-link" href="#nav-contact" data-toggle="tab" role="tab" aria-selected="false"
+                        aria-controls="nav-contact" id="nav-contact-tab">
+                        <i class="fas fa-mail-bulk"></i> Contact
+                    </a>
+
+                </div>
+            </div>
+        </nav>
+
+
+
+
+
+        <!-- Navigation Bar ends -->
+    </div>
+    <!-- Navigation Bar Container ends -->
+
+
+    <!-- Main Webpage Container starts -->
+    <div class="container-fluid main-page">
+        <div class="row tab-content" id="nav-tabContent">
+
+            <!-- Header Column starts -->
+            <div class="col-lg-3 col-md-12 col-sm-12 header-col">
+                <div class="header-div">
+
+                    <!-- Header content list starts -->
+                    <ul style="list-style-type: none; margin: 0; padding: 0%;">
+                        <li class="text-center">
+                            <img src="img/main_photo.png" alt="" class="profile-img" loading="lazy" />
+                        </li>
+                        <li class="text-center">
+                            <div class="header-text" style="text-shadow: 3px 3px black; ">Kartik Derasari</div>
+                        </li>
+                        <li class="text-center">
+                            <div href="" class="typewrite header-subtext" data-period="2000"
+                                data-type='[ "Community Manager", "Developer Relations", "Web Developer", "Technology Evangelist", "Machine Learning Engineer" ]'>
+                                <span class="wrap"></span>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <!-- Social Media Icons list starts -->
+                    <div class="icon-list-div">
+                        <ul style="list-style-type: none;">
+                            <li>
+                                <a href="https://www.facebook.com/kartik.derasari.9"><i
+                                        class="fab fa-facebook fa-lg"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/kartik_derasari/"><i
+                                        class="fab fa-instagram fa-lg"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/kartik_derasari"><i class="fab fa-twitter fa-lg"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/in/kartikderasari/"><i
+                                        class="fab fa-linkedin fa-lg"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/kartikderasari"><i class="fab fa-github fa-lg"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="ownership">Made with <span style="color: red;">❤</span> by me</div>
+                </div>
+            </div>
+
+
+
+            <!-- Main Content Column starts -->
+
+            <section
+                class="col-lg-9 col-md-12 col-sm-12 main-page-content tab-pane fade show active bg-image-section animate__animated animate__flipInX "
+                id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                <div class="heading-text tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                    <h1 class="animate__animated animate__rubberBand animate__delay-2s"
+                        style="text-shadow: 3px 3px black; ">Kartik Derasari</h1>
+                    <p id="description" style="text-shadow: 2px 2px black; "></p>
+                </div>
+            </section>
+
+            <section
+                class="col-lg-9 col-md-12 col-sm-12 main-page-content tab-pane fade animate__animated animate__zoomInLeft "
+                id="nav-about" role="tabpanel" aria-labelledby="nav-about-tab">
+
+                <div class="row pre-scrollable" style="margin: 0px; max-height: 580px; padding: 0px;">
+                    <div class="col-lg-12 col-md-12 col-sm-12 inner-col ">
+                        <h2 class="content-heading animate__animated animate__bounce animate__delay-2s">About Me</h2>
+                        <p>Kartik Derasari is currently pursuing his Bachelors of Engineering in Computer and Meanwhile,
+                            He has been contributing towards various programs and communities namely Google AI | Explore
+                            ML, Google Code-In - TensorFlow, Microsoft Student Partner, Google Developers Group
+                            Ahmedabad, Google Developers Group Cloud Ahmedabad, Developer Circles from Facebook and
+                            International Institute of Electrical and Electronics Engineers.</span> He is having 2+ years of
+                            experience managing and facilitating communities with cutting-edge technical knowledge. He
+                            has been recognized for winning Hackathons, contributions towards the Community, and Project
+                            Mentoring. Having a good grasp over Python and Artificial Intelligence, he inculcated
+                            Machine Learning knowledge to more than 1500 students and professionals. He always try to
+                            innovate using Internet of Things and the power of AI.</p>
+                    </div>
+
+                    <div class="col-lg-6 col-md-12 col-sm-12 inner-col">
+                        <h2 class="content-heading animate__animated animate__bounce animate__delay-2s">Skills</h2>
+                        <span class="badge badge-pill badge-primary">HTML</span>
+                        <span class="badge badge-pill badge-primary">CSS</span>
+                        <span class="badge badge-pill badge-primary">JS</span>
+                        <span class="badge badge-pill badge-primary">Python</span>
+                        <span class="badge badge-pill badge-primary">Community Management</span>
+                        <span class="badge badge-pill badge-primary">Machine Learning</span>
+                        <span class="badge badge-pill badge-primary">Developer Relations</span>
+                        <span class="badge badge-pill badge-primary">Cloud Computing</span>
+                    </div>
+
+                    <div class="col-lg-6 col-md-12 col-sm-12">
+                        <img src="img/work.png" alt="" class="work-image" loading="lazy">
+                    </div>
+
+
+
+                    <div class="container" style="padding: 30px 30px;">
+                        <div class="row justify-content-lg-between no-gutters">
+
+                            <div class="col col-lg-12 col-md-12 col-sm-12">
+                                <h2 class="content-heading animate__animated animate__bounce animate__delay-2s">Some
+                                    facts about me</h2>
+                            </div>
+
+                            <div class="col col-lg-4 col-md-12 col-sm-12 ">
+                                <div class="fact-card">
+                                    <i class="fas fa-chalkboard-teacher" aria-hidden="true"></i> <br>
+                                    <h3 class="fact-text"> Talks & Workshops facilitated
+                                    </h3>
+                                    <h4 class="fact-count">22</h4>
+                                </div>
+
+                            </div>
+                            <div class="col col-lg-4 col-md-12 col-sm-12">
+                                <div class="fact-card">
+                                    <i class="far fa-calendar-alt" aria-hidden="true"></i> <br>
+                                    <h3 class="fact-text"> Events Organized
+                                    </h3>
+                                    <h4 class="fact-count">45+</h4>
+                                </div>
+                            </div>
+                            <div class="col col-lg-4 col-md-12 col-sm-12">
+                                <div class="fact-card">
+                                    <i class="fas fa-coffee" aria-hidden="true"></i> <br>
+                                    <h3 class="fact-text"> Mentoring Students
+                                    </h3>
+                                    <h4 class="fact-count">30</h4>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <!-- <div class="col col-lg-12 col-md-12 col-sm-12 inner-col ">
+                        <h2 class="content-heading">Stories</h2>
+                    </div>
+                    <div class="col col-lg-4 inner-col">
+                        <div class="card" style="width: 18rem;" data-toggle="modal" data-target="#exampleModalLong">
+                            <img class="card-img-top" src="..." alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+
+                        <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog"
+                        aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    ...
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+
+                    <div class="col col-lg-4 inner-col">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="..." alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-lg-4 inner-col">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="..." alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div> -->
+
+                    <div class="col col-lg-12 col-md-12 col-sm-12" style="padding: 0 30px ;">
+                        <h2 class="content-heading animate__animated animate__bounce animate__delay-2s">Communities I've
+                            been associated with</h2>
+                    </div>
+
+                    <div class="container" style="padding: 0 30px;">
+
+                        <div class="row ml-auto" style="padding: 0px; margin: 0px;">
+
+                            <div class="col col-lg-4 col-md-6 col-sm-12 ">
+                                <img src="img/communities/ieee.png" alt="" class="comm-logo" loading="lazy">
+                            </div>
+                            <div class="col col-lg-4 col-md-6 col-sm-12 ">
+                                <img src="img/communities/IEEESOUSB.png" alt="" class="comm-logo" loading="lazy">
+                            </div>
+                            <div class="col col-lg-4 col-md-6 col-sm-12">
+                                <img src="img/communities/IEEE India Council .png" alt="" class="comm-logo"
+                                    loading="lazy">
+                            </div>
+                            <div class="col col-lg-4 col-md-6 col-sm-12">
+                                <img src="img/communities/gdg_cloud_ahm.png" alt="" class="comm-logo" loading="lazy">
+                            </div>
+                            <div class="col col-lg-4 col-md-6 col-sm-12">
+                                <img src="img/communities/exploreml.png" alt="" class="comm-logo" loading="lazy">
+                            </div>
+                            <div class="col col-lg-4 col-md-6 col-sm-12">
+                                <img src="img/communities/msp.png" alt="" loading="lazy">
+                            </div>
+                            <div class="col col-lg-4 col-md-6 col-sm-12">
+                                <img src="img/communities/GCI-new-logo.png" alt="" class="comm-logo" loading="lazy">
+                            </div>
+
+
+                            <div class="col col-lg-4 col-md-6 col-sm-12">
+                                <img src="img/communities/hackerearth.png" alt="" class="comm-logo" loading="lazy">
+                            </div>
+                            <div class="col col-lg-4 col-md-6 col-sm-12">
+                                <img src="img/communities/IEEE_cbtc.png" alt="" class="comm-logo" loading="lazy">
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </section>
+
+            <section
+                class="col-lg-9 col-md-12 col-sm-12 main-page-content tab-pane fade animate__animated animate__lightSpeedInLeft"
+                id="nav-resume" role="tabpanel" aria-labelledby="nav-resume-tab">
+                <div class="row pre-scrollable"
+                    style="margin: 0px; max-height: 580px; padding: 0px; padding-bottom: 40px;">
+
+                    <div class="col-lg-12 col-md-12 col-sm-12 inner-col">
+
+                        <h2 class="content-heading">Experience</h2>
+                        <p>Some catchy tagline here!</p>
+                        <div class="resume-container">
+                            <div class="float-lg-left">
+                                <h3 class="resume-head">Developer Advocate - Arkeytec</h3>
+                                <i class="subtext">Startup/ Ahmedabad, India / January 2020-Present</i>
+                                <!-- <i class="far fa-dot-circle icon-exp"></i> -->
+                                <p class="exp-text">Designed and Developed a full-fledged customer end product building
+                                    Machine Learning
+                                    workflow & pipelines, designing platform & custom REST APIs built in NodeJS and
+                                    Python
+                                    for
+                                    end users and administrators, and managed deployment.</p>
+                            </div>
+
+                            <!-- <hr class="exp-hr"> -->
+
+                            <div class="float-lg-right">
+
+                                <h3 class="resume-head">Chairperson - Silver Oak University IEEE Student Branch</h3>
+                                <i class="subtext">Campus Community – 120+ Members / Ahmedabad, India / March 2020 -
+                                    Present
+                                </i>
+
+                                <p>Leading a team of more than 150 students, managing the student branch and
+                                    coordinating
+                                    and
+                                    executing the activities related to the development of the IEEE members. </p>
+                            </div>
+
+                            <div class="float-lg-left">
+                                <h3 class="resume-head">Co-Organizer - GDG Cloud Ahmedabad</h3>
+                                <i class="subtext">Developer Community – 4000+ Members / Ahmedabad, India / September
+                                    2019 -
+                                    Present
+                                </i>
+
+                                <p class="exp-text">Successfully leading a community of Technology Enthusiasts
+                                    interested to
+                                    learn more about
+                                    products developed by Google and open source products and, community backed by
+                                    Google
+                                    Developers Team. </p>
+                            </div>
+
+                            <div class="float-lg-right">
+
+                                <h3 class="resume-head">Machine Learning Facilitator – Google AI | Explore ML </h3>
+                                <i class="subtext">Education Program by Google AI / July 2019 - Present </i>
+
+                                <p class="exp-text">Been a Top Contributor facilitating more than 2000+ students on
+                                    Machine
+                                    Learning and
+                                    designing & developing innovation resulted into Top 20 Project for Mentorship
+                                    Program at
+                                    Google.</p>
+                            </div>
+
+
+
+                            <div class="float-lg-left">
+
+                                <h3 class="resume-head">Lead Ambassador - IEEE Collabratec</h3>
+                                <i class="subtext">Global Platform for Technical Community / March 2020 - Present</i>
+
+                                <p class="exp-text">Influencing communities about IEEE Collabratec platform and IEEE
+                                    Membership, coordinating marketing and management of activities performed by the
+                                    core
+                                    team. </p>
+                            </div>
+
+                            <div class="float-lg-right">
+
+                                <h3 class="resume-head">Student Partner - Microsoft</h3>
+                                <i class="subtext">Student Developer Community / Ahmedabad, India / August 2019 -
+                                    Present</i>
+
+                                <p class="exp-text">Managed a community of Student developers interested in open-source
+                                    technologies by Microsoft. Facilitated students with knowledge on various topics
+                                    including Artificial Intelligence on Azure platform.</p>
+                            </div>
+
+                            <div class="float-lg-left">
+
+                                <h3 class="resume-head">Mentor for TensorFlow - Google Code-In</h3>
+                                <i class="subtext">Global Programming Competition / November 2019- January 2020</i>
+
+                                <p>Mentored a number of students in this Global coding competition hosted to encourage
+                                    pre-university student towards open source contributions and technologies.</p>
+                            </div>
+
+                            <!-- <div class="float-lg-right">
+
+                            <h3 class=""></h3>
+                            <i class="subtext"></i>
+                            <i class="far fa-dot-circle icon-exp"></i>
+                            <p class="exp-text"></p>
+                        </div> -->
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12 col-md-12 col-sm-12 inner-col">
+
+
+                        <h2 class="content-heading">Education</h2>
+                        <p>Some catchy tagline here!</p>
+
+                        <div class="education-container">
+
+
+                            <div class="float-lg-left">
+                                <h3 class="resume-head">Bachelor of Engineering - Computer</h3>
+                                <i class="subtext">Silver Oak College of Engineering and Technology, Ahmedabad, India /
+                                    January 2020-Present</i>
+
+                                <p class="exp-text"></p>
+                            </div>
+
+
+
+                            <div class="float-lg-right">
+
+                                <h3 class="resume-head">Higher Secondary Education</h3>
+                                <i class="subtext">Navkar Public School, Ahmedabad, India / 2015 - 2017</i>
+
+                                <p class="exp-text"></p>
+                            </div>
+
+                            <div class="float-lg-left">
+                                <h3 class="resume-head">Secondary Education</h3>
+                                <i class="subtext">Nirman High School, Ahmedabad, India /
+                                    2015 - 2017</i>
+
+                                <p class="exp-text"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section
+                class="col-lg-9 col-md-12 col-sm-12 main-page-content tab-pane fade show animate__animated animate__flipInY"
+                id="nav-blog" role="tabpanel" aria-labelledby="nav-blog-tab">
+                <div class="heading-text tab-pane active" id="blog" role="tabpanel" aria-labelledby="blog-tab">
+                    <h1 style="text-shadow: 3px 3px black; "> Stories are on their way! <i class="fas fa-running"></i>
+                    </h1>
+                    <img src="img/blog.png" alt="" class="blog-image" loading="lazy">
+                    <p id="description" style="text-shadow: 2px 2px black; "></p>
+                </div>
+            </section>
+
+            <!-- <section class="col-lg-9 col-md-12 col-sm-12 main-page-content tab-pane fade show " id="nav-blog"
+                role="tabpanel" aria-labelledby="nav-blog-tab">
+                <div class="row pre-scrollable" style="margin: 0px; max-height: 580px; padding: 0px;">
+                    <div class="col col-lg-12 col-md-12 col-sm-12 inner-col ">
+                        <h2 class="content-heading">Stories</h2>
+                    </div>
+                    <div class="col col-lg-4">
+                        <div class="card" style="width: 18rem;" data-toggle="modal" data-target="#exampleModalLong">
+                            <img class="card-img-top" src="..." alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+
+                        <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog"
+                        aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    ...
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+
+                    <div class="col col-lg-4">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="..." alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-lg-4">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="..." alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section> -->
+
+            <section
+                class="col-lg-9 col-md-12 col-sm-12 main-page-content tab-pane fade animate__animated animate__bounceInLeft"
+                id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                <div class="row pre-scrollable" style="margin: 0px; max-height: 580px; padding: 0px;">
+                    <div class="col-lg-12 col-md-12 col-sm-12 inner-col">
+
+                        <h2 class="content-heading inner-col">Contact Me!</h2>
+                    </div>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col col-lg-4 col-md-12 col-md-12 ">
+                                <div class="contact-card">
+                                    <i class="fas fa-map-marked-alt"></i> <br>
+                                    <p class="fact-text" style="font-weight: bolder;"> Ahmedabad, India
+                                    </p>
+                                </div>
+                                <div class="contact-card">
+                                    <i class="far fa-envelope"></i>
+                                    <p class="fact-text" style="font-weight: bolder;"> derasarikartik@gmail.com
+                                    </p>
+                                </div>
+                                <div class="contact-card">
+                                    <i class="fas fa-phone-alt"></i>
+                                    <p class="fact-text" style="font-weight: bolder;"> +91-8780279796
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="col col-lg-8 col-md-12 col-md-12">
+
+
+
+                                <div class="col col-lg-12 col-md-12 col-sm-12">
+                                    <h2 class="content-heading" style="display: inline;"> How may I help you?
+                                    </h2>
+                                    <img src="img/contact.png" alt=""
+                                        style="width: 30%; padding: 0%; padding-left: 10%;" loading="lazy">
+                                </div>
+                                <div class="col col-lg-12 col-md-12 col-sm-12">
+                                    <form action="mailto:derasarikartik@gmail.com">
+                                        <div class="form-group">
+                                            <label for="exampleFormControlInput1">Name</label>
+                                            <input type="text" class="form-control" id="exampleFormControlInput1"
+                                                placeholder="Your Name">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="exampleFormControlInput1">Email</label>
+                                            <input type="email" class="form-control" id="exampleFormControlInput1"
+                                                placeholder="name@example.com">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleFormControlTextarea1">Something you want to say</label>
+                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                                                placeholder="What do you want to say?"></textarea>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+            </section>
+        </div>
+</body>
+
+</html>
