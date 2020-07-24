@@ -435,11 +435,21 @@ img {
   #nav-blog {
     min-height: 370px;
   }
+
+}
+
+@media only screen and (max-width: 1023px) {
   .nav-ul {
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .nav-div, .main-page{
+    margin-top: 10px;
   }
 }
+
+
+
 
 @media only screen and (max-width: 450px) {
   .resume-container::before {
@@ -506,9 +516,7 @@ img {
 }
 
 @media only screen and (min-width: 450px) and (max-width: 830px) {
-  #nav-tab {
-    padding: 10px 20px;
-  }
+
   .nav-item{
     margin: 0 auto;
   }
