@@ -120,8 +120,6 @@
             document.body.appendChild(css);
         };
     </script>
-
-
 </head>
 
 <body>
@@ -133,8 +131,15 @@
     <div class="container-fluid align-items-end nav-div">
 
         <!-- Navigation Bar starts -->
-        <nav class="navbar ">
-            <div class=" nav nav-tabs ml-auto nav-ul " id="nav-tab" role="tablist">
+        <nav class="navbar navbar-expand-lg navbar-expand-sm ">
+
+            <div class=" nav nav-tabs ml-auto nav-ul " id="nav-tab " role="tablist">
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-tab"
+                    aria-controls="nav-tab" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars text-white"></i>
+                </button>
+
 
                 <a class="nav-item nav-link active" href="#nav-home" data-toggle="tab" role="tab" aria-selected="true"
                     aria-controls="nav-home" id="nav-home-tab">
@@ -163,13 +168,14 @@
                 </a>
 
             </div>
-        </nav>
+    </div>
+    </nav>
 
 
 
 
 
-        <!-- Navigation Bar ends -->
+    <!-- Navigation Bar ends -->
     </div>
     <!-- Navigation Bar Container ends -->
 
@@ -192,7 +198,7 @@
                         </li>
                         <li class="text-center">
                             <div href="" class="typewrite header-subtext" data-period="2000"
-                                data-type='[ "Community Manager", "Developer Relations", "Web Developer", "Machine Learning Engineer" ]'>
+                                data-type='[ "Community Manager", "Web Developer", "Machine Learning Engineer" ]'>
                                 <span class="wrap"></span>
                             </div>
                         </li>
@@ -230,32 +236,37 @@
 
             <!-- Main Content Column starts -->
 
-            <section
-                class="col-lg-9 col-md-12 col-sm-12 main-page-content tab-pane fade show active bg-image-section animate__animated animate__flipInX "
+            <section class="col-lg-9 col-md-12 col-sm-12 main-page-content tab-pane fade show active bg-image-section  "
                 id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
                 <div class="heading-text tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">
                     <h1 class="animate__animated animate__rubberBand animate__delay-2s"
                         style="text-shadow: 3px 3px black; ">Kartik Derasari</h1>
                     <p id="description" style="text-shadow: 2px 2px black; "></p>
+                    <!-- <div href="" class="typewrite header-subtext" data-period="2000" style="text-shadow: 2px 2px black; "
+                        data-type='[ "Community Manager", "Developer Relations", "Web Developer", "Machine Learning Engineer" ]'>
+                        <span class="wrap"></span>
+                    </div> -->
                 </div>
             </section>
 
-            <section
-                class="col-lg-9 col-md-12 col-sm-12 main-page-content tab-pane fade animate__animated animate__zoomInLeft "
-                id="nav-about" role="tabpanel" aria-labelledby="nav-about-tab">
+            <section class="col-lg-9 col-md-12 col-sm-12 main-page-content tab-pane fade  " id="nav-about"
+                role="tabpanel" aria-labelledby="nav-about-tab">
 
                 <div class="row pre-scrollable" style="margin: 0px; max-height: 580px; padding: 0px;">
                     <div class="col-lg-12 col-md-12 col-sm-12 inner-col ">
-                        <h2 class="content-heading animate__animated animate__bounce animate__delay-2s">About Me</h2>
-                        <p>Kartik is a passionate Community Builder, shaping developer communities from the past two
-                            years. He is leading Google Developers Group Cloud community in Ahmedabad and managing
-                            student developer communities namely Silver Oak University IEEE Student Branch and Industry
-                            Relations Team at IEEE India Council. He is a Product Builder & Evangelist at Arkeytec and
-                            he has been a Microsoft Student Partner, and a Google AI | Explore ML Facilitator.</p>
+                        <h2 class="content-heading  ">About Me</h2>
+                        <p> Kartik is a Engineering student and a passionate Community Builder, shaping developer communities from the past two
+                            years. He loves to                          
+                            create impacts and wishes to maximize his experience of facilitating
+                            communities & building relationships, designing and launching
+                            community programs, delivering 40+ events offline and online,
+                            advocating and training technologies to more than 2000
+                            students and organizing small-large scale conferences.
+                            </p>
                     </div>
 
                     <div class="col-lg-6 col-md-12 col-sm-12 inner-col">
-                        <h2 class="content-heading animate__animated animate__bounce animate__delay-2s">Skills</h2>
+                        <h2 class="content-heading  ">Skills</h2>
                         <span class="badge badge-pill badge-primary">HTML</span>
                         <span class="badge badge-pill badge-primary">CSS</span>
                         <span class="badge badge-pill badge-primary">JS</span>
@@ -279,7 +290,7 @@
                         <div class="row justify-content-lg-between no-gutters">
 
                             <div class="col col-lg-12 col-md-12 col-sm-12">
-                                <h2 class="content-heading animate__animated animate__bounce animate__delay-2s">Some
+                                <h2 class="content-heading  ">Some
                                     facts about me</h2>
                             </div>
 
@@ -374,7 +385,7 @@
                     </div> -->
 
                     <div class="col col-lg-12 col-md-12 col-sm-12" style="padding: 0 30px ;">
-                        <h2 class="content-heading animate__animated animate__bounce animate__delay-2s">Communities I've
+                        <h2 class="content-heading  ">Communities I've
                             been associated with</h2>
                     </div>
 
@@ -421,9 +432,8 @@
                 </div>
             </section>
 
-            <section
-                class="col-lg-9 col-md-12 col-sm-12 main-page-content tab-pane fade animate__animated animate__lightSpeedInLeft"
-                id="nav-resume" role="tabpanel" aria-labelledby="nav-resume-tab">
+            <section class="col-lg-9 col-md-12 col-sm-12 main-page-content tab-pane fade " id="nav-resume"
+                role="tabpanel" aria-labelledby="nav-resume-tab">
                 <div class="row pre-scrollable"
                     style="margin: 0px; max-height: 580px; padding: 0px; padding-bottom: 40px;">
 
@@ -432,36 +442,27 @@
                         <h2 class="content-heading">Leadership & Experience</h2>
                         <p></p>
                         <div class="resume-container">
-                            <div class="float-lg-left">
+                            <!-- <div class="float-lg-left">
                                 <h3 class="resume-head">Developer Advocate - Arkeytec</h3>
                                 <i class="subtext">Startup/ Ahmedabad, India / January 2020-Present</i>
                                 <!-- <i class="far fa-dot-circle icon-exp"></i> -->
-                                <p class="exp-text">Developed an MVP single-handedly to facilitate the Architecture
+                            <!--<p class="exp-text">Developed an MVP single-handedly to facilitate the Architecture
                                     industry with an Intelligent system which can automate the building design process
                                     using Machine Learning and launched the MVP with custom REST APIs built in NodeJS
                                     for custom demands.</p>
-                            </div>
+                            </div> -->
 
-                            <div class="float-lg-right">
 
-                                <h3 class="resume-head">Chairperson - Silver Oak University IEEE Student Branch</h3>
-                                <i class="subtext">Campus Community – 120+ Members / Ahmedabad, India / March 2020 -
-                                    Present
-                                </i>
-
-                                <p class="exp-text">Being the Head of Community, supervised all the community operations while managing
-                                    and guiding bunch of team leads, increasing the community presence by 400% and
-                                    successfully delivering community programs for student developers.</p>
-                            </div>
 
                             <div class="float-lg-left">
 
-                                <h3 class="resume-head">Community Lead – Developer Student Clubs by Google Developers
+                                <h3 class="resume-head">Community Lead – Developer Student Clubs Silver Oak University
                                 </h3>
                                 <i class="subtext">Student Developer Community / India / August 2020 - Present
                                 </i>
 
-                                <p class="exp-text">Managed launching and leading a student developer community while delivering events,
+                                <p class="exp-text">Managed launching and leading a student developer community while
+                                    delivering events,
                                     building relationships, and demonstrating technologies with the help of community
                                     programs by Google Developer Relations team. </p>
                             </div>
@@ -493,6 +494,19 @@
 
                             <div class="float-lg-right">
 
+                                <h3 class="resume-head">Chairperson - Silver Oak University IEEE Student Branch</h3>
+                                <i class="subtext">Campus Community – 120+ Members / Ahmedabad, India / March 2020 -
+                                    Present
+                                </i>
+
+                                <p class="exp-text">Being the Head of Community, supervised all the community operations
+                                    while managing
+                                    and guiding bunch of team leads, increasing the community presence by 400% and
+                                    successfully delivering community programs for student developers.</p>
+                            </div>
+
+                            <!-- <div class="float-lg-right">
+
                                 <h3 class="resume-head"> Organizer – DevRel Asia 2020 </h3>
                                 <i class="subtext">International Virtual Conference / August 2020 - Present </i>
 
@@ -500,7 +514,7 @@
                                     having five different regional tracks where I co-lead one of the tracks while
                                     designing different initiatives, managing public relations, and helping to achieve
                                     the overall goals through developer marketing, and community relations.</p>
-                            </div>
+                            </div> -->
 
                             <div class="float-lg-left">
 
@@ -541,7 +555,8 @@
                                 <h3 class="resume-head">Mentor for TensorFlow - Google Code-In</h3>
                                 <i class="subtext">Global Programming Competition / November 2019- January 2020</i>
 
-                                <p class="exp-text">Achieved a position as a mentor in a global programming competition organized by
+                                <p class="exp-text">Achieved a position as a mentor in a global programming competition
+                                    organized by
                                     Google to help pre-university students learn about Open source technologies.</p>
                             </div>
 
@@ -594,9 +609,8 @@
                 </div>
             </section>
 
-            <section
-                class="col-lg-9 col-md-12 col-sm-12 main-page-content tab-pane fade show animate__animated animate__flipInY"
-                id="nav-blog" role="tabpanel" aria-labelledby="nav-blog-tab">
+            <section class="col-lg-9 col-md-12 col-sm-12 main-page-content tab-pane fade show " id="nav-blog"
+                role="tabpanel" aria-labelledby="nav-blog-tab">
                 <div class="heading-text tab-pane active" id="blog" role="tabpanel" aria-labelledby="blog-tab">
                     <h1 style="text-shadow: 3px 3px black; "> Stories are on their way! <i class="fas fa-running"></i>
                     </h1>
@@ -669,9 +683,8 @@
                 </div>
             </section> -->
 
-            <section
-                class="col-lg-9 col-md-12 col-sm-12 main-page-content tab-pane fade animate__animated animate__bounceInLeft"
-                id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+            <section class="col-lg-9 col-md-12 col-sm-12 main-page-content tab-pane fade" id="nav-contact"
+                role="tabpanel" aria-labelledby="nav-contact-tab">
                 <div class="row pre-scrollable" style="margin: 0px; max-height: 580px; padding: 0px;">
                     <div class="col-lg-12 col-md-12 col-sm-12 inner-col">
 
@@ -687,12 +700,7 @@
                                 </div>
                                 <div class="contact-card">
                                     <i class="far fa-envelope"></i>
-                                    <p class="fact-text" style="font-weight: bolder;"> derasarikartik@gmail.com
-                                    </p>
-                                </div>
-                                <div class="contact-card">
-                                    <i class="fas fa-phone-alt"></i>
-                                    <p class="fact-text" style="font-weight: bolder;"> +91-8780279796
+                                    <p class="fact-text" style="font-weight: bolder;"> derasarikartik[at]gmail[dot]com
                                     </p>
                                 </div>
                             </div>
