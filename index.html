@@ -58,74 +58,11 @@
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css" />
     <script src="https://kit.fontawesome.com/c94427133a.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
     <link rel="stylesheet" href="css/styles.css" />
 
-    <script>
-
-        var TxtType = function (el, toRotate, period) {
-            this.toRotate = toRotate;
-            this.el = el;
-            this.loopNum = 0;
-            this.period = parseInt(period, 10) || 2000;
-            this.txt = '';
-            this.tick();
-            this.isDeleting = false;
-        };
-
-        TxtType.prototype.tick = function () {
-            var i = this.loopNum % this.toRotate.length;
-            var fullTxt = this.toRotate[i];
-
-            if (this.isDeleting) {
-                this.txt = fullTxt.substring(0, this.txt.length - 1);
-            } else {
-                this.txt = fullTxt.substring(0, this.txt.length + 1);
-            }
-
-            this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
-
-            var that = this;
-            var delta = 200 - Math.random() * 100;
-
-            if (this.isDeleting) { delta /= 2; }
-
-            if (!this.isDeleting && this.txt === fullTxt) {
-                delta = this.period;
-                this.isDeleting = true;
-            } else if (this.isDeleting && this.txt === '') {
-                this.isDeleting = false;
-                this.loopNum++;
-                delta = 500;
-            }
-
-            setTimeout(function () {
-                that.tick();
-            }, delta);
-        };
-
-        window.onload = function () {
-            var elements = document.getElementsByClassName('typewrite');
-            for (var i = 0; i < elements.length; i++) {
-                var toRotate = elements[i].getAttribute('data-type');
-                var period = elements[i].getAttribute('data-period');
-                if (toRotate) {
-                    new TxtType(elements[i], JSON.parse(toRotate), period);
-                }
-            }
-            // INJECT CSS
-            var css = document.createElement("style");
-            css.type = "text/css";
-            css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
-            document.body.appendChild(css);
-        };
-    </script>
 </head>
 
 <body>
-
-    <!-- Background Image -->
-    <div class="bg-image" style="background-image: url(img/main_bg.png);"></div>
 
     <!-- Navigation Bar Container starts -->
     <div class="container-fluid align-items-end nav-div p-0 mt-3">
@@ -349,7 +286,7 @@
                                 <img src="img/communities/IEEESOUSB.png" alt="" class="comm-logo" loading="lazy">
                             </div>
                             <div class="col col-lg-4 col-md-6 col-sm-12">
-                                <img src="img/communities/IEEE India Council.png" alt="" class="comm-logo"
+                                <img src="img/communities/IEEE_India_Council.png" alt="" class="comm-logo"
                                     loading="lazy">
                             </div>
 
@@ -377,130 +314,10 @@
                     <div class="col-lg-12 col-md-12 col-sm-12 inner-col">
 
                         <h2 class="content-heading">Leadership & Experience</h2>
-                        <p></p>
-                        <div class="resume-container">
 
-                            <div class="float-lg-left">
-
-                                <h3 class="resume-head">Community Lead – Developer Student Clubs Silver Oak University
-                                </h3>
-                                <i class="subtext">Student Developer Community / India / August 2020 - Present
-                                </i>
-
-                                <p class="exp-text">Managing to launch and lead a university-based community group for
-                                    students while delivering events on open-source
-                                    and Google developer technologies to help them build their knowledge while building
-                                    relationships, and demonstrating
-                                    technologies with the help of community programs by Google Developer Relations team.
-                                </p>
+                        <div>
+                            <div class="row" id="resume-container">
                             </div>
-
-                            <div class="float-lg-right">
-                                <h3 class="resume-head">Organizer - GDG Cloud Ahmedabad</h3>
-                                <i class="subtext">Developer Community / Ahmedabad, India / September
-                                    2019 -
-                                    Present
-                                </i>
-
-                                <p class="exp-text">Leading a community of Google Cloud professionals, delivered more
-                                    than 15 community events, discussions, and
-                                    conferences while setting-up various community programs and initiatives, managing
-                                    communication and growing the
-                                    community strength. </p>
-                            </div>
-
-                            <div class="float-lg-left">
-
-                                <h3 class="resume-head">Machine Learning Facilitator – Google AI | Explore ML </h3>
-                                <i class="subtext">Education Program by Google AI / July 2019 - Present </i>
-
-                                <p class="exp-text">Advocated Google AI’s ML-Edu program, demonstrating Machine Learning
-                                    & TensorFlow to 2000+ student developers
-                                    while delivering mentorship and more than 10 events independently. While achieving a
-                                    position on the Wall of Fame of
-                                    Top contributors, designed and launched an MVP which was invited to receive
-                                    Mentorship from Google Developer
-                                    Experts & Google for Start-up Mentors.</p>
-                            </div>
-
-                            <div class="float-lg-right">
-
-                                <h3 class="resume-head">Chairperson - Silver Oak University IEEE Student Branch</h3>
-                                <i class="subtext">Campus Community – 120+ Members / Ahmedabad, India / March 2020 -
-                                    Present
-                                </i>
-
-                                <p class="exp-text">Being the Head of Community, supervised all the community operations
-                                    while managing and guiding a bunch of team
-                                    leads, increasing the community presence by 400% and successfully delivering
-                                    community programs for student
-                                    developers.
-                                </p>
-                            </div>
-
-                            <!-- <div class="float-lg-right">
-
-                                <h3 class="resume-head"> Organizer – DevRel Asia 2020 </h3>
-                                <i class="subtext">International Virtual Conference / August 2020 - Present </i>
-
-                                <p class="exp-text">Delivering the Asia’s Biggest Developer Relations virtual conference
-                                    having five different regional tracks where I co-lead one of the tracks while
-                                    designing different initiatives, managing public relations, and helping to achieve
-                                    the overall goals through developer marketing, and community relations.</p>
-                            </div> -->
-
-                            <div class="float-lg-left">
-
-                                <h3 class="resume-head">Microsoft Learn Student Ambassador - Beta</h3>
-                                <i class="subtext">Student Developer Community / Ahmedabad, India / August 2019 -
-                                    Present</i>
-
-                                <p class="exp-text">Managed launching a community of student developers interested in
-                                    open-source and technologies by Microsoft, facilitating them with various
-                                    initiatives and campaigns upon their interest and feedback.</p>
-                            </div>
-
-                            <div class="float-lg-right">
-
-                                <h3 class="resume-head">Industry Relations Coordinator– IEEE India Council </h3>
-                                <i class="subtext">National Council / India / March 2020 - Present </i>
-
-                                <p class="exp-text">Achieved a leadership position in a national council of the world’s
-                                    largest technical professional organization from 719
-                                    nominations while enabling community relations with industries to deliver community
-                                    programs and campaigns at a
-                                    great scale. </p>
-                            </div>
-
-
-                            <div class="float-lg-left">
-
-                                <h3 class="resume-head">Lead Ambassador - IEEE Collabratec</h3>
-                                <i class="subtext">Global Platform for Technical Community / March 2020 - Present</i>
-
-                                <p class="exp-text">Accomplished a position in the advocacy program by IEEE Collabratec
-                                    to guide and promote the networking platform to various communities among IEEE. </p>
-                            </div>
-
-
-
-                            <div class="float-lg-right">
-
-                                <h3 class="resume-head">Mentor for TensorFlow - Google Code-In</h3>
-                                <i class="subtext">Global Programming Competition / November 2019- January 2020</i>
-
-                                <p class="exp-text">Achieved a position as a mentor in a global programming competition
-                                    organized by
-                                    Google to help pre-university students learn about Open source technologies.</p>
-                            </div>
-
-                            <!-- <div class="float-lg-right">
-
-                            <h3 class=""></h3>
-                            <i class="subtext"></i>
-                            <i class="far fa-dot-circle icon-exp"></i>
-                            <p class="exp-text"></p>
-                        </div> -->
                         </div>
                     </div>
 
@@ -508,27 +325,7 @@
 
                         <h2 class="content-heading">Education</h2>
 
-                        <div class="education-container">
-
-                            <div class="float-lg-left">
-                                <h3 class="resume-head">Bachelor of Engineering - Computer</h3>
-                                <i class="subtext">Silver Oak College of Engineering and Technology, Ahmedabad, India /
-                                    January 2020-Present</i>
-                                <p class="exp-text"></p>
-                            </div>
-
-                            <div class="float-lg-right">
-                                <h3 class="resume-head">Higher Secondary Education</h3>
-                                <i class="subtext">Navkar Public School, Ahmedabad, India / 2015 - 2017</i>
-                                <p class="exp-text"></p>
-                            </div>
-
-                            <div class="float-lg-left">
-                                <h3 class="resume-head">Secondary Education</h3>
-                                <i class="subtext">Nirman High School, Ahmedabad, India /
-                                    2015 - 2017</i>
-                                <p class="exp-text"></p>
-                            </div>
+                        <div class="row" id="education-container">
                         </div>
                     </div>
                 </div>
@@ -606,11 +403,8 @@
                     </div>
                 </div>
             </section>
-
-
-
-            </section>
         </div>
+        <script src="index.js"></script>
 </body>
 
 </html>

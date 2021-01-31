@@ -8,7 +8,7 @@ html {
 }
 
 body {
-  background-color: #d1b4b4;
+  background-color: #ecececd4;
   font-family: "Open Sans", sans-serif;
 }
 
@@ -23,21 +23,6 @@ h3,
 .header-text {
   font-family: "Patua One", cursive;
   letter-spacing: 1px;
-}
-
-.bg-image {
-  position: absolute;
-  width: auto;
-  height: auto;
-  top: 0px;
-  left: 0px;
-  right: 0px;
-  bottom: 0px;
-  box-sizing: border-box;
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  z-index: -1;
 }
 
 .nav-div {
@@ -190,27 +175,6 @@ img {
   width: 70%;
 }
 
-.fact-card {
-  background-color: #6d72e5;
-  color: #ffffff !important;
-  border-radius: 15px;
-  text-align: center;
-  padding: 10% 0;
-  margin: 5%;
-  height: 220px;
-  border: 1px solid;
-}
-
-.contact-card {
-  background-color: #a0adcc;
-  border-radius: 15px;
-  text-align: center;
-  padding: 10%;
-  margin: 5%;
-  border: 1px solid;
-  box-shadow: 7px 7px grey;
-}
-
 .row.no-gutters {
   margin-right: 0;
   margin-left: 0;
@@ -232,62 +196,6 @@ img {
   left: 50%;
   border-color: rgb(71, 90, 197);
   margin-top: 44px;
-}
-
-.resume-container::before {
-  content: " ";
-  background-color: rgb(135, 135, 231);
-  position: absolute;
-  left: 50%;
-  width: 2px;
-  display: block;
-  top: 145px;
-  bottom: 123px;
-  transform: translateX(-1px);
-  opacity: 0.7;
-}
-
-.education-container::before {
-  content: " ";
-  background-color: rgb(135, 135, 231);
-  position: absolute;
-  left: 50%;
-  width: 2px;
-  display: block;
-  top: 125px;
-  bottom: 55px;
-  transform: translateX(-1px);
-  opacity: 0.7;
-}
-
-.float-lg-left::before {
-  content: "";
-  background-color: white;
-  position: relative;
-  top: 23px;
-  bottom: 0px;
-  left: 111%;
-  width: 20px;
-  height: 20px;
-  display: block;
-  border-radius: 50%;
-  transform: translateX(-9px);
-  border: outset 3px rgb(135, 135, 231);
-}
-
-.float-lg-right::before {
-  content: "";
-  background-color: white;
-  position: relative;
-  top: 23px;
-  bottom: 0px;
-  left: -11%;
-  width: 20px;
-  height: 20px;
-  display: block;
-  transform: translateX(-9px);
-  border-radius: 50%;
-  border: outset 3px rgb(135, 135, 231);
 }
 
 .icon-exp {
@@ -393,10 +301,6 @@ img {
     position: relative;
     left: 40%;
   }
-  .fact-card {
-    min-width: 250px;
-    min-height: 230px;
-  }
   #nav-blog {
     min-height: 370px;
   }
@@ -413,72 +317,9 @@ img {
   }
 }
 
-@media only screen and (max-width: 450px) {
-  .resume-container::before {
-    content: " ";
-    position: absolute;
-    left: 10%;
-    width: 2px;
-    display: block;
-    top: 160px;
-    bottom: 123px;
-    transform: translateX(-1px);
-    opacity: 0;
-  }
-  .education-container::before {
-    content: " ";
-    position: absolute;
-    left: 10%;
-    width: 2px;
-    display: block;
-    top: 160px;
-    bottom: 55px;
-    transform: translateX(-1px);
-    opacity: 0.7;
-  }
-  .float-lg-left {
-    text-align: start;
-    width: 90%;
-    margin-right: 0%;
-    margin-left: 10%;
-  }
-
-  .float-lg-right {
-    text-align: start;
-    width: 90%;
-    margin-left: 10%;
-  }
-  .float-lg-left::before {
-    content: "";
-    position: relative;
-    top: 23px;
-    bottom: 0px;
-    left: -9%;
-    width: 20px;
-    height: 20px;
-    display: block;
-    transform: translateX(-9px);
-  }
-
-  .float-lg-right::before {
-    content: "";
-    position: relative;
-    top: 23px;
-    bottom: 0px;
-    left: -10%;
-    width: 20px;
-    height: 20px;
-    display: block;
-    transform: translateX(-9px);
-  }
-}
-
 @media only screen and (min-width: 450px) and (max-width: 830px) {
   .nav-item {
     margin: 0 auto;
-  }
-  .float-lg-right {
-    margin-left: 55%;
   }
 }
 
