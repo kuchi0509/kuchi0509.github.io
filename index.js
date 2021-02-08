@@ -114,18 +114,6 @@ let education = [
         start: '2017',
         end: 'Present'
     },
-    {
-        degree: 'Higher Secondary Education',
-        institute: 'Navkar Public School',
-        start: '2015',
-        end: '2017'
-    },
-    {
-        degree: 'Secondary School Certificate',
-        institute: 'Nirman High School',
-        start: '2015',
-        end: '2015'
-    },
 ];
 
 function stringResizer(str) {
