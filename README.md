@@ -1,7 +1,4 @@
-# kartikderasari.github.io - [Personal Website] (http://kartikderasari.me) 
-
-
-
+# kartikderasari.github.io - Built using Vue, Vuetify and Firebase.
 
 ## Like to contribute? Follow the guidelines!
 
@@ -15,6 +12,6 @@
 - Navigate to **GitHub** and create a new **Pull Request**
 - Wait back till your contributions are added :)
 
-## Did you like the project? 
+## Did you like the project?
 
 `Don't forget to give it a ⭐`

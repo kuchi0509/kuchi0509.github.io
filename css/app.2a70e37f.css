@@ -1,0 +1,1 @@
+.bg-overlay:before{background:url(../img/gr_above.175d12e8.svg) no-repeat;background-size:130vw 65vh;top:-5vh;right:0;width:84vw;height:65vh}.bg-overlay2:after,.bg-overlay:before{content:"";position:absolute;z-index:-2}.bg-overlay2:after{background:url(../img/gr_below.f0dcb972.svg) no-repeat;background-size:27vw 13vw;bottom:-9vw;left:0;width:27vw;height:13vw}
